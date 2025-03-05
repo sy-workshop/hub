@@ -1,3 +1,9 @@
+echo "> [SYHUB] Starting install ... "
+
+# Pull for changes
+echo "> Pulling for github changes ... "
+git pull
+
 # Set variables
 export SYHUB_INSTALL_DIR_PARENT="/opt/sy-workshop"
 export SYHUB_INSTALL_DIR="$SYHUB_INSTALL_DIR_PARENT/syhub"
