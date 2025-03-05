@@ -1,0 +1,14 @@
+[Unit]
+Description=A general purpose service to manage dataflow and processes with the hub server
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+ExecStart=/usr/bin/sh /opt/workshop/syhub/start.sh
+
+[Install]
+WantedBy=multi-user.target

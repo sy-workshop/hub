@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SyHub</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <div id="header_row">
+        SyHub
+    </div>
+    <div id="modules_container">
+        <div id="pc_table" class="module_element"> 
+            <div class="module_element_header"><span style="margin-left: 10px;">PC-Table</span></div>
+            <div class="module_element_field">
+                <span id="pc_table_temp" style="margin-left: 5px;"></span>
+                <img src="/img/icon_temperature.png" class="module_element_field_icon">
+            </div>
+            <div class="module_element_field">
+                <span id="pc_table_humid" style="margin-left: 5px;"></span>
+                <img src="/img/icon_humidity.png" class="module_element_field_icon">
+            </div>
+        </div> 
+    </div>
+</body>
+<!-- LIBRARIES -->
+<script src="/lib/stream_connection.js"></script>
+<script src="/lib/smartshop.js"></script>
+<!-- SCRIPTS -->
+<script src="/js/index.js"></script>
+</html>

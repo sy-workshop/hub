@@ -1,0 +1,30 @@
+:root {
+    /* Standard SY */
+        --font-family-main: 'Courier New', Courier, monospace;
+
+        /* BASE */
+        --color-accent-1: #2B92E0;
+        --color-accent-2: #31DEB9;
+        --color-accent-3: #E17A2A;
+        --color-base-1: #613819;
+        --color-base-2: #435461;
+
+        /* ADDITIONS */
+
+    /**/
+}
+
+body {
+    margin: 0 0 0 0;   
+
+    background-color: var(--color-base-2);
+    
+    color: black;
+    font-family: var(--font-family-main);
+    
+    /* Make unselectable */
+    -webkit-user-select: none;  /* Safari */        
+    -moz-user-select: none;     /* Firefox */
+    -ms-user-select: none;      /* IE10+/Edge */
+    user-select: none;          /* Standard */
+}
