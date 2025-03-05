@@ -1,5 +1,6 @@
 # Set variables
-export SYHUB_INSTALL_DIR="/opt/sy-workshop/syhub"
+export SYHUB_INSTALL_DIR_PARENT="/opt/sy-workshop/"
+export SYHUB_INSTALL_DIR="$SYHUB_INSTALL_DIR_PARENT/syhub"
 export SYHUB_SERVICE_FILE="/etc/systemd/system/syhub.service"
 
 echo "> Configuration: "
@@ -21,7 +22,7 @@ fi
 echo "> Copying install files ... "
 
 # Install repo to system
-mkdir "$SYHUB_INSTALL_DIR"
+mkdir "$SYHUB_INSTALL_DIR_PARENT"
 
 sudo cp -r ./ "$SYHUB_INSTALL_DIR"
 sudo cp "syhub.service" "$SYHUB_SERVICE_FILE"
