@@ -1,5 +1,5 @@
 # Set variables
-export SYHUB_INSTALL_DIR_PARENT="/opt/sy-workshop/"
+export SYHUB_INSTALL_DIR_PARENT="/opt/sy-workshop"
 export SYHUB_INSTALL_DIR="$SYHUB_INSTALL_DIR_PARENT/syhub"
 export SYHUB_SERVICE_FILE="/etc/systemd/system/syhub.service"
 
