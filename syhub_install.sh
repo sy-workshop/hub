@@ -22,7 +22,7 @@ fi
 echo "> Copying install files ... "
 
 # Install repo to system
-mkdir "$SYHUB_INSTALL_DIR_PARENT"
+sudo mkdir "$SYHUB_INSTALL_DIR_PARENT"
 
 sudo cp -r ./ "$SYHUB_INSTALL_DIR"
 sudo cp "syhub.service" "$SYHUB_SERVICE_FILE"
