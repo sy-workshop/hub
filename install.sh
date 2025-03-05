@@ -50,11 +50,11 @@ read -p "Enter Network-ID: " ZT_NETWORK_ID
 
 sudo zerotier-cli join "$ZT_NETWORK_ID"
 
-## Nextcloud dependencies
-sudo apt install apache2
-
-## syhub
+# Larger services
 sh scripts/syhub_install.sh
+sh scripts/docket_install.sh
+sh scripts/nextcloud_install.sh
+
 
 # Finish up
 echo ""
