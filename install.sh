@@ -54,7 +54,7 @@ sudo zerotier-cli join "$ZT_NETWORK_ID"
 sudo apt install apache2
 
 ## syhub
-sh syhub_install.sh
+sh scripts/syhub_install.sh
 
 # Finish up
 echo ""
