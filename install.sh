@@ -3,7 +3,7 @@ echo "############################"
 echo "#    HUB INSTALL SCRIPT    #"
 echo "############################"
 echo ""
-echo "> Version: 1.0.0/2025/03/07"
+echo "> Version: 0.2.0/2025/03/07"
 echo ""
 
 # Update apt
