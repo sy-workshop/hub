@@ -8,7 +8,7 @@ Type=simple
 Restart=always
 RestartSec=1
 User=root
-ExecStart=/usr/bin/sh /opt/workshop/syhub/start.sh
+ExecStart=/usr/bin/sh /opt/sy-workshop/syhub/start.sh
 
 [Install]
 WantedBy=multi-user.target
