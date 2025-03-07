@@ -8,4 +8,4 @@ sudo chmod a+rwx "$INSTALL_DIR"
 # Change into install directory
 cd "$INSTALL_DIR/syhub"
 
-sudo /opt/workshop/syhub/target/debug/syhub
+sudo "$INSTALL_DIR/target/debug/syhub"
