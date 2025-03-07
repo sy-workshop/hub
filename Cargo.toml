@@ -1,9 +1,10 @@
 [package]
 name = "hub"
 description = "A general purpose service to manage dataflow and processes with the hub server"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 authors = [ "Samuel Noesslböck <samuel.noesslboeck@gmail.com>" ]
+readme = "README.md"
 
 [dependencies]
 rand = "0.9.0"

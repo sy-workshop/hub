@@ -1,4 +1,8 @@
-# hub
+<p align="center">
+    <img src="design/logos/hub_logo_text.png" width="60%">
+</p>
+
+--- 
 
 Set of script files and custom software to setup the `hub.local` server used in the workshop.
 
