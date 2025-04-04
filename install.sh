@@ -37,14 +37,15 @@ echo ""
 echo "> Installing samba ... "
 sudo apt install samba
 
-mkdir /home/sy/labshare
-mkdir /home/sy/archive
+mkdir /home/sy/archive          # Letter O - "Old"
+mkdir /home/sy/printer          # Letter P - "Printer"
+mkdir /home/sy/labshare         # Letter S - "Storage"
 
 sudo cp smb.conf /etc/samba/smb.conf
 sudo service smbd restart
 sudo ufw allow samba
 
-
+## Scripts
 sh scripts/syhub_install.sh
 sh scripts/docker_install.sh
 sh scripts/mosquitto_install.sh
