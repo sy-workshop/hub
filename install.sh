@@ -11,6 +11,11 @@ echo "> Updating APT ... "
 sudo apt update
 sudo apt upgrade
 
+# Create users
+echo "| > Creating public user ... "
+sudo useradd -m public
+sudo passwd public
+
 # Install essentials
 sudo apt install build-essential checkinstall -y
 
