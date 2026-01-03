@@ -6,6 +6,7 @@ sudo apt install samba
 # Create users
 echo "| > Creating public user ... "
 sudo useradd -m public
+sudo passwd public
 
 # Prompt new passwords
 echo "| > Enter samba password for 'sy':"
@@ -20,9 +21,10 @@ mkdir -p /home/public/solid_edge_std    # Letter N - "Norm"
 mkdir -p /home/sy/archive               # Letter S - "Storage"
 mkdir -p /home/sy/labshare              # Letter L - "Labshare"
 
-chmod -R 755 /home/public/solid_edge_std
-chmod -R 755 /home/sy/archive 
-chmod -R 755 /home/sy/labshare
+chown public:public /home/public/solid_edge_std
+chmod -R 777 /home/public/solid_edge_std
+chmod -R 777 /home/sy/archive 
+chmod -R 777 /home/sy/labshare
 
 # Config file and networking
 echo "| > Configuring samba ... "
