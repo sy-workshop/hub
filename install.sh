@@ -12,7 +12,7 @@ sudo apt update
 sudo apt upgrade
 
 # Install essentials
-sudo apt insall build-essential checkinstall -y
+sudo apt install build-essential checkinstall -y
 
 # Install dependencies
 echo ""
@@ -32,20 +32,13 @@ sudo zerotier-cli join "$ZT_NETWORK_ID"
 
 # Installing cool services
 
-## Samba
-echo ""
-echo "> Installing samba ... "
-sudo apt install samba
-
-mkdir /home/sy/archive          # Letter O - "Old"
-mkdir /home/sy/printer          # Letter P - "Printer"
-mkdir /home/sy/labshare         # Letter S - "Storage"
-
-sudo cp smb.conf /etc/samba/smb.conf
-sudo service smbd restart
-sudo ufw allow samba
+## SSH
+sudo apt install ssh
+sudo service ssh enable
+sudo service ssh start
 
 ## Scripts
+sh scripts/samba_install.sh
 sh scripts/syhub_install.sh
 sh scripts/docker_install.sh
 sh scripts/mosquitto_install.sh
@@ -59,6 +52,3 @@ echo ""
 echo "> [HUB-SETUP] INSTALLATION DONE! Thank you."
 echo ""
 echo "> Starting configuration prompts: "
-
-# Prompt new passwords
-sudo smbpasswd -a sy
