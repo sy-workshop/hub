@@ -17,12 +17,12 @@ sudo smbpasswd -a public
 # Create directories
 echo "| > Creating directories ... "
 
-mkdir -p /home/public/solid_edge_std        # Letter N - "Norm"
+mkdir -p /srv/solid_edge_std            # Letter N - "Norm"
 mkdir -p /home/sy/archive               # Letter S - "Storage"
 mkdir -p /home/sy/labshare              # Letter L - "Labshare"
 
-chown public:public /home/public/solid_edge_std
-chmod -R 777 /home/public/solid_edge_std
+chown public:public /srv/solid_edge_std
+chmod -R 777 /srv/solid_edge_std
 chmod -R 777 /home/sy/archive 
 chmod -R 777 /home/sy/labshare
 
