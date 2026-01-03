@@ -17,8 +17,12 @@ sudo smbpasswd -a public
 echo "| > Creating directories ... "
 
 mkdir -p /home/public/solid_edge_std    # Letter N - "Norm"
-mkdir -p /home/sy/archive               # Letter O - "Old"
-mkdir -p /home/sy/labshare              # Letter S - "Storage"
+mkdir -p /home/sy/archive               # Letter S - "Storage"
+mkdir -p /home/sy/labshare              # Letter L - "Labshare"
+
+chmod -R 755 /home/public/solid_edge_std
+chmod -R 755 /home/sy/archive 
+chmod -R 755 /home/sy/labshare
 
 # Config file and networking
 echo "| > Configuring samba ... "
