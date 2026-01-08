@@ -5,6 +5,7 @@ echo "> [MOSQUITTO] Starting install ... "
 echo "| -> Creating certificates ... "
 
 export CERT_PATH=/etc/certificates
+mkdir -p $CERT_PATH
 
 # Check OpenSSL install
 sudo apt update
@@ -12,7 +13,7 @@ sudo apt install openssl
 
 # Create certificates
 openssl req -new -x509 -days 3650 -extensions v3_ca \
-  -keyout $CERT_PATH/ca.key -out ca.crt
+  -keyout $CERT_PATH/ca.key -out $CERT_PATH/ca.crt
 
 openssl genrsa -out $CERT_PATH/server.key 2048
 openssl req -new -key $CERT_PATH/server.key -out $CERT_PATH/server.csr
@@ -20,7 +21,7 @@ openssl req -new -key $CERT_PATH/server.key -out $CERT_PATH/server.csr
 openssl x509 -req -in $CERT_PATH/server.csr \
   -CA $CERT_PATH/ca.crt -CAkey $CERT_PATH/ca.key -CAcreateserial \
   -out $CERT_PATH/server.crt -days 365
-  
+
 
 echo "| -> Starting install and configuration ... "
 sudo apt install mosquitto
