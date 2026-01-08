@@ -9,6 +9,14 @@ sudo apt upgrade
 sudo apt install apache2 libapache2-mod-php php-gd php-mysql \
 php-curl php-mbstring php-intl php-gmp php-xml php-imagick php-zip
 
+# Download nextcloud
+mkdir temp
+cd temp
+
+curl https://download.nextcloud.com/server/releases/latest.tar.bz2
+
+cd ..
+
 # sudo apt install software-properties-common
 # sudo add-apt-repository ppa:ondrej/php
 # sudo apt update
