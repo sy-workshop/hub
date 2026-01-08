@@ -13,26 +13,33 @@ php-curl php-mbstring php-intl php-gmp php-xml php-imagick php-zip
 mkdir temp
 cd temp
 
-curl https://download.nextcloud.com/server/releases/latest.tar.bz2
+wget https://download.nextcloud.com/server/releases/latest.tar.bz2
+tar -xjvf latest.tar.bz2
+
+echo "| -> Copying installation ... "
+
+sudo cp -r nextcloud /var/www
+sudo chown -R www-data:www-data /var/www/nextcloud
 
 cd ..
 
-# sudo apt install software-properties-common
-# sudo add-apt-repository ppa:ondrej/php
-# sudo apt update
+sudo cp apache/nextcloud.conf /etc/apache2/sites-available/nextcloud.conf
 
-# # Modules from requirements
-# sudo apt install    \
-#   php8.3            \
-#   php8.3-cli        \
-#   php8.3-fpm        \
-#   php8.3-curl       \
-#   php8.3-gd         \
-#   php8.3-mbstring   \
-#   php8.3-xml        \
-#   php8.3-zip        \
-#   php8.3-common     \
-#   php8.3-bz2        \
-#   php8.3-opcache    \
-#   php8.3-mysql      \
-#   php8.3-intl       
+sudo a2ensite nextcloud.conf
+
+sudo a2enmod rewrite
+sudo a2enmod headers
+sudo a2enmod env
+sudo a2enmod dir
+sudo a2enmod mime
+
+sudo systemctl restart apache2
+
+# HTTPS integration
+## Check OpenSSL install
+sudo apt update
+sudo apt install openssl
+
+mkdir ~/certs
+openssl genrsa -des3 -out ~/certs/apache.key 2048
+openssl req -x509 -new -nodes -key ~/certs/myCA.key -sha256 -days 1825 -out ~/certs/apache.pem

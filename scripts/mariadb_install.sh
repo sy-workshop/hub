@@ -5,7 +5,6 @@ sudo apt upgrade
 
 sudo apt install mariadb-server
 
-
 read -p "Password for database user 'sy': " DB_PASSWORD
 
 # Start SQL
