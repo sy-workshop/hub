@@ -4,7 +4,7 @@ echo "> [MOSQUITTO] Starting install ... "
 
 echo "| -> Creating certificates ... "
 
-export CERT_PATH=/etc/certificates
+export CERT_PATH=/etc/certificate
 mkdir -p $CERT_PATH
 
 # Check OpenSSL install
