@@ -41,5 +41,7 @@ sudo apt update
 sudo apt install openssl
 
 mkdir ~/certs
-openssl genrsa -des3 -out ~/certs/apache.key 2048
-openssl req -x509 -new -nodes -key ~/certs/myCA.key -sha256 -days 1825 -out ~/certs/apache.pem
+openssl req -x509 -newkey rsa:2048 -nodes \
+  -keyout apache.key -out apache.crt \
+  -days 365 -sha256 \
+  -subj "/CN=your.domain.com"
