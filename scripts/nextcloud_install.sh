@@ -1,5 +1,12 @@
 echo "[NEXTCLOUD] Starting install ... "
 
+echo "| -> Creating certificates ... "
+mkdir ~/certs
+openssl req -x509 -newkey rsa:2048 -nodes \
+  -keyout ~/certs/apache.key -out ~/certs/apache.crt \
+  -days 365 -sha256 \
+  -subj "/CN=hub.local"
+
 # PHP Install
 echo "| -> Installing Requirements ..."
 
@@ -39,9 +46,3 @@ sudo systemctl restart apache2
 ## Check OpenSSL install
 sudo apt update
 sudo apt install openssl
-
-mkdir ~/certs
-openssl req -x509 -newkey rsa:2048 -nodes \
-  -keyout ~/certs/apache.key -out ~/certs/apache.crt \
-  -days 365 -sha256 \
-  -subj "/CN=hub.local"
