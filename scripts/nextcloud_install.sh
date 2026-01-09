@@ -34,6 +34,7 @@ sudo cp apache/nextcloud.conf /etc/apache2/sites-available/nextcloud.conf
 
 sudo a2ensite nextcloud.conf
 
+sudo a2enmod ssl
 sudo a2enmod rewrite
 sudo a2enmod headers
 sudo a2enmod env
