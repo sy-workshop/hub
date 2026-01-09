@@ -42,6 +42,6 @@ sudo apt install openssl
 
 mkdir ~/certs
 openssl req -x509 -newkey rsa:2048 -nodes \
-  -keyout apache.key -out apache.crt \
+  -keyout ~/certs/apache.key -out ~/certs/apache.crt \
   -days 365 -sha256 \
-  -subj "/CN=your.domain.com"
+  -subj "/CN=hub.local"
