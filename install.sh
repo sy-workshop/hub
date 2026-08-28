@@ -43,6 +43,7 @@ sudo service ssh enable
 sudo service ssh start
 
 ## Scripts
+sh scripts/cloudflare_install.sh
 sh scripts/samba_install.sh
 sh scripts/syhub_install.sh
 sh scripts/docker_install.sh
